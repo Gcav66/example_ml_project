@@ -1,6 +1,0 @@
-pylint
-pytest
-black
-numpy
-pandas
-scikit-learn
