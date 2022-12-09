@@ -58,7 +58,7 @@ def model_metrics(search, train_data):
     logging.info(model_metrics)
     return model_metrics
 
-def run():
+def run_full_pipeline():
     my_data = ingest_data()
     data_sample = eda(my_data)
     clean_data = feat_eng(my_data)
@@ -67,6 +67,6 @@ def run():
     return model_results
 
 if __name__ == '__main__':
-    run()
+    run_full_pipeline()
 
 
