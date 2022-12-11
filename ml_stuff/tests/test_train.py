@@ -1,5 +1,7 @@
 from ml_stuff.models.train import run_full_pipeline
 
-def placeholder():
-    """Gus is too lazy to write a real test"""
-    assert True
+def test_function():
+    print(run_full_pipeline())
+
+if __name__ == '__main__':
+    test_function()
