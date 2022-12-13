@@ -2,9 +2,11 @@ import os
 import pandas as pd
 
 import logging
+
 logging.basicConfig(level=logging.DEBUG)
 
 DATA_ENV = os.environ["DATA_ENV"].lower()
+
 
 def ingest_data():
     """WIP: Read data from sklearn dataset"""
@@ -15,5 +17,6 @@ def ingest_data():
     logging.info(df.head())
     return df
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     ingest_data()

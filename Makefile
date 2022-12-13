@@ -7,11 +7,13 @@ test:
 	python -m pytest -vv ml_stuff/tests/test_train.py
 
 format:
-	black *.py
+	black ml_stuff/tests/*.py
+	black ml_stuff/models/*.py
+	black ml_stuff/data/*.py
 
 
 lint:
-	pylint --disable=R,C train.py
+	pylint --disable=R,C ml_stuff/models/train.py
 
 all: install lint test
 
