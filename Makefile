@@ -3,19 +3,13 @@ install:
 	pip install -r requirements.txt &&\
 	pip install -e .
 
-test:
-	python -m pytest -vv ml_stuff/tests/test_train.py
+lint:
+	pylint --disable=R,C ml_stuff/models/train.py
 
 format:
 	black ml_stuff/tests/*.py
 	black ml_stuff/models/*.py
 	black ml_stuff/data/*.py
 
-
-lint:
-	pylint --disable=R,C ml_stuff/models/train.py
-
-all: install lint test
-
-clean:
-	rm -rf .env
+test:
+	python -m pytest -vv ml_stuff/tests/test_train.py
