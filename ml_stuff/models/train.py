@@ -61,18 +61,18 @@ def train_model(train_data):
 
 def model_metrics(search, train_data):
     """WIP: Track model metrics"""
-    model_metrics = {
+    model_data = {
         "Max Depth": search.best_params_["max_depth"],
         "n_estimators": search.best_params_["n_estimators"],
         "score": search.score(train_data["X_test"], train_data["y_test"]),
     }
-    logging.info(model_metrics)
-    return model_metrics
+    logging.info(model_data)
+    return model_data
 
 
 def run_full_pipeline():
     my_data = ingest_data()
-    data_sample = eda(my_data)
+    eda(my_data)
     clean_data = feat_eng(my_data)
     my_model = train_model(clean_data)
     model_results = model_metrics(my_model, clean_data)
