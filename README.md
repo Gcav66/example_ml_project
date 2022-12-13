@@ -1,6 +1,7 @@
 # This is a ML Project
 
-Really cool stuff
-
-WIP: more cool stuff coming
+Instructions:
+* clone repository
+* Run `make install` to install dependencies
+* Run `python run.py` to execute workflow
 
