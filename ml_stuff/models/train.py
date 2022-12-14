@@ -1,3 +1,4 @@
+from joblib import dump
 from sklearn.datasets import fetch_california_housing
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV
@@ -69,6 +70,19 @@ def model_metrics(search, train_data):
     logging.info(model_data)
     return model_data
 
+def save_model(search):
+    """WIP: Save model to registry"""
+    sample_rec = [[34,
+                  13,
+                  7,
+                  1,
+                  1,
+                  752,
+                  2.79,
+                  39.02]]
+    logging.info(search.predict(sample_rec)[0])
+    dump(search, "ml_stuff/models/model_store/clf_v1.joblib")
+    
 
 def run_full_pipeline():
     my_data = ingest_data()
@@ -76,6 +90,7 @@ def run_full_pipeline():
     clean_data = feat_eng(my_data)
     my_model = train_model(clean_data)
     model_results = model_metrics(my_model, clean_data)
+    save_model(my_model)
     return model_results
 
 
