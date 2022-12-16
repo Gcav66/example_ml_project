@@ -25,3 +25,4 @@ Continual helps ML teams bring software engineering practices to ML deployments.
  * Code that tests our API (test_api.py)
  * Dockerfile to containerize our web service 
  * CD via AWS ECS (GH Action --> ECS Fargate)
+ * Right now - this deployment requires manual review by me
