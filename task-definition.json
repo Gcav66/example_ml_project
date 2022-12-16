@@ -5,8 +5,8 @@
     "networkMode": "bridge",
     "containerDefinitions": [
         {
-            "name": "ml-run",
-            "image": "docker.io/gcav66/test_ml:0.2",
+            "name": "ml-container",
+            "image": "",
             "repositoryCredentials": {
                 "credentialsParameter": ""
             },
