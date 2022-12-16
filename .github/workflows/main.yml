@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Deploy
-      - run: |
+        run: |
           echo I am deploying to Prod! 
       - name: Checkout
         uses: actions/checkout@v3
