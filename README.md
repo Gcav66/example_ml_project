@@ -20,6 +20,7 @@ Continual helps ML teams bring software engineering practices to ML deployments.
  * CI job to automate build & test on merge (GH Action - main.yml)
 
 * The second iteration adds inferencing and Continuous Deployment
+ * CD job deploys REST API to AWS ECS on pull request
  * REST API for model inferencing with FastAPI (inference.py)
  * Code that tests our API (test_api.py)
  * Dockerfile to containerize our web service 
