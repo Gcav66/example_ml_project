@@ -13,3 +13,6 @@ format:
 
 test:
 	python -m pytest -vv ml_stuff/tests/test_train.py
+
+serve:
+	uvicorn inference:app --reload --host 0.0.0.0 --port 8001
