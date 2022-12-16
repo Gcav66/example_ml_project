@@ -34,7 +34,7 @@ jobs:
   
   deploy:
     name: Deploy To Prod
-    if: github.event_name == 'pull_request'
+    #if: github.event_name == 'pull_request'
     needs: [Build]
     runs-on: ubuntu-latest
     environment: production
