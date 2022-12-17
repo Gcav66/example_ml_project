@@ -31,3 +31,4 @@ Continual helps ML teams bring software engineering practices to ML deployments.
   * Add multiple environments
   * Add mocks for tests
   * Add orchestration
+  * Sagemaker, AzureML, Vertex
